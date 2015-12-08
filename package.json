@@ -1,0 +1,28 @@
+{
+  "name": "react-web-audio-player",
+  "version": "0.0.1",
+  "description": "Audio player using ReactJS and the Web Audio API",
+  "main": "app/main.js",
+  "scripts": {
+    "watch": "webpack --progress --colors --watch",
+    "dev": "webpack-dev-server --config webpack.config.js --hot --progress --inline --host 0.0.0.0 --content-base build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ken Ko",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.1.4",
+    "babel-loader": "^6.1.0",
+    "babel-preset-es2015": "^6.1.4",
+    "babel-preset-react": "^6.1.4",
+    "css-loader": "^0.22.0",
+    "react-hot-loader": "^1.3.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.4",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2"
+  }
+}
