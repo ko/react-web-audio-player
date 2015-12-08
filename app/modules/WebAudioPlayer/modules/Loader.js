@@ -5,10 +5,21 @@ export class Loader extends React.Component {
     constructor(props) {
 
         super(props);
+
+        this.state = {
+            url: '',
+        };
+    }
+
+    handleOnChange(evt) {
+        this.setState({
+
+            url: evt.target.value,
+        });
     }
 
     handleClick(evt) {
-        let url = '/sample.mp3';
+        let url = this.state.url;
         let request = new XMLHttpRequest();
 
         request.open('GET', url, true);
@@ -32,9 +43,12 @@ export class Loader extends React.Component {
 
         return (
                 <div>
-                    <p>
+                    <input 
+                        type="text"
+                        value={this.state.url} 
+                        onChange={this.handleOnChange.bind(this)} 
+                        />
                     <button onClick={this.handleClick.bind(this)}>Load</button>
-                    </p>
                 </div>
                );
     }
